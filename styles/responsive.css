@@ -1,4 +1,4 @@
-@media(max-width: 1100px) {
+@media(max-width: 975px) {
     #page-home {
       background-position-x: 80vw;
     }
@@ -18,7 +18,24 @@
     #page-home main {
       align-items: center;
     }
+
+    #page-search-results .cards{
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    #page-search-results .cards img {
+      height: 250px;
+    }
+
   }
+
+  @media(max-width: 800px) {
+    #page-search-results .cards{
+      grid-template-columns: 1fr;
+    }
+  }
+  
 
 @media(min-width: 1700px) {
     #page-home {
