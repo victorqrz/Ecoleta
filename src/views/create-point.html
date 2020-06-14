@@ -1,23 +1,16 @@
-<!DOCTYPE html>
+{% extends "layout.html" %}
+{% set pageId = "page-create-point"%}
 
-<html lang="pt_br">
-
-<head>
+{% block title %}
     <title>Criar um ponto de coleta</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+{% endblock title %}
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&display=swap" rel="stylesheet" />
-
-    <link rel="stylesheet" href="./styles/main.css" />
+{% block styles %}
     <link rel="stylesheet" href="./styles/create-point.css" />
+{% endblock styles%}
 
-    <link rel="stylesheet" href="./styles/responsive.css" />
-</head>
-
-<body>
-    <div id="page-create-point">
-        {% include "partials/page-header.html" %}
+{% block content %}
+    {% include "partials/page-header.html" %}
 
         <form action="">
 
@@ -28,9 +21,15 @@
                     <h2>Dados da entidade</h2>
                 </legend>
 
-                <div class="field">
-                    <label for="name">Nome da entidade</label>
-                    <input type="text" name="name" required />
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">Nome da entidade</label>
+                        <input type="text" name="name" required />
+                    </div>
+                    <div class="field">
+                        <label for="name">Imagem da entidade</label>
+                        <input type="url" name="image" placeholder="http://" required />
+                    </div>
                 </div>
 
                 <div class="field-group">
@@ -70,6 +69,7 @@
             <fieldset>
                 <legend>
                     <h2>Itens de coleta</h2>
+                    <span>Selecione um ou mais itens abaixo</span>
                 </legend>
 
                 <div class="itens-grid">
@@ -110,9 +110,8 @@
             <button type="submit">Cadastrar ponto de coleta</button>
 
         </form>
+{% endblock content%}
 
-    </div>
+{% block scripts %}
     <script src="./scripts/create-point.js"></script>
-</body>
-
-</html>
+{% endblock scripts%}
