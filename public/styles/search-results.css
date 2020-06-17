@@ -26,17 +26,21 @@
   height: 20px;
 }
 
+body {
+  background-color: white;
+}
+
 body::after{
   content: '';
-  position: fixed;
-  background-color: white;
-  top: 260px;
+  position: absolute;
+  background-color: #F0F0F5;
+  top: 0;
   right: 0;
   left: 0;
   bottom: 0;
+  height: 16rem;
   z-index: -1;
 }
-
 main {
   margin: 48px;
 }

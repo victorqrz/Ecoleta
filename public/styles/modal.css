@@ -46,7 +46,6 @@
     line-height: 16px;
     display: block;
     margin-bottom: 8px;
-    text-align: center;
 }
 
 #modal form .search-field {
@@ -75,4 +74,16 @@
 
 #modal form button:hover {
     background-color: #2FB86E;
+}
+
+/*Formatação do modal do point created*/
+#modal.point .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal.point h1 {
+    color: white;
+    margin-top: 32px;
 }

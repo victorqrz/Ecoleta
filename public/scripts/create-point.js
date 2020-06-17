@@ -54,6 +54,9 @@ function handleSelectedItem(event) {
 
     const itemId = itemLi.dataset.id;
 
+    //console.log("ITEM ID: ", itemId);
+
+    //verificação se já existem itens selecionados
     const alreadySelected = selectedItems.findIndex(item => item == itemId);
 
     if (alreadySelected == -1) {
@@ -63,6 +66,8 @@ function handleSelectedItem(event) {
 
         selectedItems = filteredItems;
     }
+
+    //console.log("SELECTED ITEMS: ", selectedItems);
 
     itemsToSend.value = selectedItems;
 }
